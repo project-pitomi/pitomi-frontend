@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { Layout, Image } from "antd";
+import { useRouter } from "next/router";
 import { getAuthHeader } from "../util";
 
 const ViewerContent = ({ id }) => {
+  const router = useRouter();
   const { Content } = Layout;
 
   const [mangaFiles, setMangaFiles] = useState([]);
